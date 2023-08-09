@@ -1,0 +1,30 @@
+
+  <hr>
+  <button type="button" class="btn btn-secondary" (click)="get()">GET</button><br><br><br>
+  <button type="button" class="btn btn-secondary" (click)="post()">POST</button><br><br><br>
+  <button type="button" class="btn btn-secondary" (click)="get_param()">GET_PARAM</button><br><br><br>
+  <button type="button" class="btn btn-secondary" (click)="put()">PUT</button><br><br><br>
+
+  <ng-container *ngFor="let item of resultadoPeticion">
+    <div class="col-md-6 col-lg-5 wow bounceInUp" [attr.data-wow-delay]="'0.2s'" [attr.data-wow-duration]="'1.4s'"> <!-- "1.4s" --> <!--offset-lg-1 ver este en otros box se sacan para ponerlo al lado de otro-->
+      <div class="box">
+        <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"> <!-- "ion-ios-analytics-outline" --> <!-- "color: #ff689b;"" --> </i></div>
+        <h4 class="title"><a href="">usuario: {{item.userId}}, titulo: {{item.title}}</a></h4> <!-- Paquetes de Viaje Personalizados -->
+        <p class="description">{{item.body}}</p>  <!-- Diseñamos itinerarios a medida que se ajustan a tus preferencias y necesidades individuales, brindándote una experiencia de viaje única y adaptada a tus gustos. -->
+        <h3 class="id">{{item.id}}</h3>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- <pre>{{resultadoPeticion|json}}</pre> -->
+
+  <!-- <ng-container>
+    <div class="col-md-6 col-lg-5 wow bounceInUp" [attr.data-wow-delay]="'0.2s'" [attr.data-wow-duration]="'1.4s'">
+        <div class="box">
+            <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+            <h4 class="title"><a href="">usuario: {{resultadoPeticion.userId}}, titulo: {{resultadoPeticion.title}}</a></h4>
+            <p class="description">{{resultadoPeticion.body}}</p>
+            <br><br><h3 class="id">{{resultadoPeticion.id}}</h3>
+        </div>
+    </div>
+  </ng-container> -->

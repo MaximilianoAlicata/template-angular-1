@@ -1,0 +1,28 @@
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+        <div class="container">
+  
+          <header class="section-header">
+            <h3>Nosotros</h3>
+            <p>Bienvenidos a <span style="color: dodgerblue; font-weight: 600;">FUNGO TRAVEL</span>, tu destino para descubrir y reservar increíbles experiencias de viaje por todo el mundo. Nos enorgullece ofrecer una amplia selección de destinos, itinerarios personalizados y un servicio excepcional para hacer realidad tus sueños de viaje.</p>
+          </header>
+  
+          <div class="row about-container">
+  
+            <div class="col-lg-5 content order-lg-1 order-2">
+  
+              <ng-container *ngFor="let icon of icon_box; let i = index">
+                <app-icon-box [icon]="icon.icon" [titulo]="icon.titulo" [delay]="icon.delay" [descripcion]="icon.descripcion"></app-icon-box>
+              </ng-container>
+                
+            </div>
+  
+            <div class="col-lg-7 background order-lg-2 order-1 wow fadeInUp">
+              <img src="assets/img/proyectofinal/about-img.png" class="img-fluid" alt="" style="opacity: 70%;">
+            </div>
+          </div>
+        </div>
+      </section><!-- #about -->
+  

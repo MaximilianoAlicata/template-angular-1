@@ -1,0 +1,30 @@
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg">
+        <div class="container">
+  
+          <header class="section-header">
+            <h3>Servicios</h3>
+            <p>En <span style="color: dodgerblue; font-weight: 600;">FUNGO TRAVEL</span>, ofrecemos una amplia gama de servicios para ayudarte a planificar y reservar tus viajes. Desde paquetes de viaje completos que incluyen vuelos, alojamiento y actividades, hasta la reserva de vuelos individuales o actividades específicas, estamos aquí para satisfacer tus necesidades. Además, nuestro equipo de expertos está disponible para brindarte asesoramiento personalizado y recomendaciones basadas en tus intereses y presupuesto.</p>
+          </header>
+  
+          <div class="row">
+          
+            <ng-container *ngFor="let item of service_box">
+              <div class="col-md-6 col-lg-5 {{item.columna}} wow bounceInUp" [attr.data-wow-delay]="item.delay + 's'" [attr.data-wow-duration]="item.duracion + 's'"> <!-- "1.4s" --> <!--offset-lg-1 ver este en otros box se sacan para ponerlo al lado de otro-->
+                <div class="box">
+                  <div class="icon"><i class={{item.icon}} [style.color]="item.color"> <!-- "ion-ios-analytics-outline" --> <!-- "color: #ff689b;"" --> </i></div>
+                  <h4 class="title"><a href="">{{item.titulo}}</a></h4> <!-- Paquetes de Viaje Personalizados -->
+                  <p class="description">{{item.descripcion}}</p>  <!-- Diseñamos itinerarios a medida que se ajustan a tus preferencias y necesidades individuales, brindándote una experiencia de viaje única y adaptada a tus gustos. -->
+                </div>
+              </div>
+            </ng-container>
+
+          </div>
+
+          <app-http-client></app-http-client>
+  
+        </div>
+      </section><!-- #services -->
+  

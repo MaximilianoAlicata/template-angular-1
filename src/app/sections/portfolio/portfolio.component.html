@@ -1,0 +1,29 @@
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio" class="clearfix">
+        <div class="container">
+  
+          <header class="section-header">
+            <h3 class="section-title">Blog</h3>
+          </header>
+  
+          <div class="row">
+              <ul> <!-- id="portfolio-flters"-->
+                <li data-filter="*" class="filter-active">Todos</li>
+                <li data-filter=".filter-app">Lugares</li>
+                <li data-filter=".filter-card">Turismo</li>
+                <li data-filter=".filter-web">Vacaciones</li>
+              </ul>
+          </div>
+  
+          <div class="row portfolio-container">
+
+            <app-album *ngFor="let item of album"
+                [imagen]="item.imagen" [titulo]="item.titulo" [parrafo]="item.parrafo"
+                [filter]="item.filter" [delay]="item.delay">
+            </app-album>  
+
+          </div>  
+        </div>
+      </section><!-- #portfolio -->
